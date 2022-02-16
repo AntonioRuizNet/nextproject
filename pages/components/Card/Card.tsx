@@ -16,7 +16,7 @@ export const Users = ({ id, name, image }: Card) => {
         <CardStyled key={id}>
           <ImgStyled image={image}></ImgStyled>
           {name.length > 10
-            ? `${name}`
+            ? `${name.length < 20 ? name : name.substring(0, 20) + '...'}`
             : name}
           <Link href={`/users/${id}`}>
             <a>

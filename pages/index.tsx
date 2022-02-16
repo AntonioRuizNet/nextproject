@@ -29,7 +29,7 @@ const Index: NextPage = (props: any) => {
 
   const [characters, setCharacters] = useState<Character[]>([]);
   const [page, setPage] = useState<number>(0);
-  const [itemsPage, setItemsPage] = useState<number>(12);
+  const [itemsPage, setItemsPage] = useState<number>(8);
 
   useEffect(() => {
     setCharacters(props.data.results);
@@ -46,7 +46,7 @@ const Index: NextPage = (props: any) => {
         {characters.length > 0 &&
           characters
             .filter((el: any, index: number) => {
-              return index > page * 10 - 1 && index < page * 10 + itemsPage;
+              return index > page * itemsPage - 1 && index < page * itemsPage + itemsPage;
             })
             .map((e: any) => {
               return <Users {...e} />;

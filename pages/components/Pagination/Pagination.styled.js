@@ -15,4 +15,5 @@ export const PaginationBlock = styled.div`
   flex-wrap: wrap;
   margin: auto;
   justify-content: center;
+  margin-top: 15px;
 `;
