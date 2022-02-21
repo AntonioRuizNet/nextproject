@@ -6,7 +6,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest --watch"
+    "test": "jest --watch",
+    "start:dev": "jest"
   },
   "dependencies": {
     "@testing-library/react": "^12.1.2",
